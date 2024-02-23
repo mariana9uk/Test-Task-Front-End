@@ -1,0 +1,30 @@
+[
+  {
+    "city": "Kyiv",
+    "image": "https://images.freeimages.com/images/large-previews/b56/st-sophia-s-cathedral-1570730.jpg"
+  },
+  {
+    "city": "London",
+    "image": "https://images.freeimages.com/images/large-previews/1c8/westminster-london-1452098.jpg"
+  },
+  {
+    "city": "Paris",
+    "image": "https://images.freeimages.com/images/large-previews/596/paris-2-1231675.jpg"
+  },
+  {
+    "city": "New York",
+    "image": "https://images.freeimages.com/images/large-previews/647/new-york-1220608.jpg"
+  },
+  {
+    "city": "Berlin",
+    "image": "https://images.freeimages.com/images/large-previews/65b/brandenburger-tor-2-1214111.jpg"
+  },
+  {
+    "city": "Tokio",
+    "image": "https://images.freeimages.com/images/large-previews/d1c/tokio-1451641.jpg"
+  },
+  {
+    "city": "Barcelona",
+    "image": "https://images.freeimages.com/images/large-previews/f4e/cathedral-1238674.jpg"
+  }
+]
