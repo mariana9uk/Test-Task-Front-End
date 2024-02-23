@@ -6,7 +6,7 @@ export const WeatherCard = ({data})=>{
         return null
     }
    
-   return <div className="trip-cards">
+   return <div className='list-weather-box'>
     {data.map((day) => {
       const datetime = day.datetime;
       const date = new Date(datetime);

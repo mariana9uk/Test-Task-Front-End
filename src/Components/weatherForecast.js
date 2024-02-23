@@ -3,19 +3,23 @@ import { WeatherCard } from "./weatherCard";
 import "../App.css";
 import { useRef } from "react";
 export const WeatherForecast = ({ weatherData }) => {
-  const tripListContainerRef = useRef(null);
+  const weatherListContainerRef = useRef(null);
   const handleWheelScroll = (event) => {
-    const tripListContainer = tripListContainerRef.current;
-    tripListContainer.scrollLeft += event.deltaY;
+    const weatherListContainer = weatherListContainerRef.current;
+    weatherListContainer.scrollLeft += event.deltaY;
   };
   return (
     <div>
       <h2>Week</h2>
-      <ul     ref={tripListContainerRef} onWheel={handleWheelScroll}>
-        <div>
+      <div className="list-weather-box">
+        <ul
+          className="weather-list-container list-weather-box"
+          ref={weatherListContainerRef}
+          onWheel={handleWheelScroll}
+        >
           <WeatherCard key={nanoid()} data={weatherData} />
-        </div>
-      </ul>
+        </ul>
+      </div>
     </div>
   );
 };

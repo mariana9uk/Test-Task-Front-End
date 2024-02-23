@@ -9,7 +9,6 @@ export const FetchForecast = async (queryCity, dateStart, dateEnd) => {
     const responce = await axios.get(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/${date1}/${date2}?unitGroup=metric&include=days&key=${API_KEY}&contentType=json`
     );
-    console.log(responce.data.days);
 
     return responce.data.days;
   } catch (error) {
@@ -24,7 +23,7 @@ export const fetchWeather = async (queryCity) => {
     const responce =
       await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}/today?unitGroup=metric&include=days
       &key=${API_KEY}&contentType=json`);
-    console.log(responce.data.days);
+
     return responce.data.days;
   } catch (error) {
     console.log(error);

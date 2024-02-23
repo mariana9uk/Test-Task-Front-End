@@ -1,5 +1,6 @@
 import "../App.css"
-export const WeatherSidebar = ({city, weatherData, dayEnd})=>{
+import { CountdownTimer } from "./timer"
+export const WeatherSidebar = ({city, weatherData, startDate})=>{
 if (!weatherData) {
     return
 }
@@ -14,9 +15,6 @@ const icon= today.icon
     const date = new Date(dayTime);
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thirsday','Friday', 'Saturday'];
     const dayOfWeek = days[date.getDay()];
-    // const timer=setInterval(() => {
-        
-    // }, interval);
 return<div className="sidebar">
 <div className="sidebar-text-box">
 <h2>
@@ -29,7 +27,7 @@ return<div className="sidebar">
 <p>
 {city}
 </p>{
-    dayEnd?<div> timer </div> :null
+    startDate?<div> <CountdownTimer startDate={startDate}/> </div> :null
 }
 
 </div>

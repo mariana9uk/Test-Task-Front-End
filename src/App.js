@@ -11,8 +11,8 @@ import { FetchForecast, fetchWeather } from "./Components/API functions";
 const App = () => {
   const [initialTrip, setInitialTrip] = useState({
     city: "Kyiv",
-    startDate: "2024-02-22",
-    endDate: "2024-02-25",
+    startDate: "2024-03-22",
+    endDate: "2024-04-25",
   });
   const [trips, setTrips] = useState([initialTrip]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -50,8 +50,7 @@ const App = () => {
           selectedDateEnd
         );
         setWeatherForecastData(fetchedData);
-        console.log(fetchedData);
-        console.log(weatherForecastData);
+      
       } catch (error) {
         console.log(error);
       }
@@ -68,7 +67,7 @@ useEffect(()=>{
       const fetchedData = await fetchWeather(selectedCity,    selectedDateStart,
         selectedDateEnd )
         setTodayWeather(fetchedData)
-        console.log(todayWeather)
+  
     } catch (error) {console.log(error)}
   };
   getWeatherForADay()
@@ -93,7 +92,7 @@ useEffect(()=>{
         <WeatherForecast weatherData={weatherForecastData} />
       </div>
       <div>
-        <WeatherSidebar city={selectedCity} weatherData={todayWeather} dayEnd={selectedDateEnd}/>
+        <WeatherSidebar city={selectedCity} weatherData={todayWeather} startDate={selectedDateStart}/>
       </div>
     </div>
   );
